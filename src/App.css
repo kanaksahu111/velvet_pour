@@ -146,15 +146,39 @@ body {
     #c-right-leaf {
       @apply absolute right-0 md:bottom-0 md:top-auto -top-20 md:w-fit w-1/3;
     }
-    div {
-      @apply opacity-0 md:px-0 px-5 space-y-5 absolute md:bottom-5 bottom-52 left-1/2 -translate-x-1/2;
+    .list {
+      @apply container mx-auto relative z-10 flex md:flex-row flex-col justify-between items-start gap-20 pt-40 2xl:px-0 px-5;
 
-      h3 {
-        @apply md:text-5xl text-2xl text-center font-serif md:w-full w-80 text-white;
+      .popular {
+          @apply space-y-8 w-full md:w-fit;
       }
 
-      p {
-        @apply text-lg text-center;
+      .loved {
+          @apply space-y-8 w-full md:w-fit pb-20 md:pb-0;
+      }
+
+      h2 {
+          @apply text-xl font-medium;
+      }
+
+      ul {
+        @apply space-y-8;
+
+        li {
+          @apply flex justify-between items-start;
+
+          h3 {
+            @apply font-modern-negra 2xl:text-3xl text-xl text-yellow;
+          }
+
+          p {
+            @apply text-sm;
+          }
+
+          span {
+            @apply text-xl font-medium;
+          }
+        }
       }
     }
   }
